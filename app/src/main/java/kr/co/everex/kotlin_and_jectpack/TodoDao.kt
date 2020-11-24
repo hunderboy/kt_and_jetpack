@@ -1,11 +1,12 @@
 package kr.co.everex.kotlin_and_jectpack
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
 interface TodoDao {
     @Query("SELECT * FROM Todo")
-    fun getAll(): List<Todo>
+    fun getAll(): LiveData<List<Todo>>
 
     @Insert
     fun insert(todo: Todo)
@@ -13,5 +14,4 @@ interface TodoDao {
     fun update(todo: Todo)
     @Delete
     fun delete(todo: Todo)
-
 }
