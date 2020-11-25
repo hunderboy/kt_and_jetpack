@@ -29,13 +29,13 @@
 
         <EditText
             android:id="@+id/todo_edit"
+            android:text="@={viewModel.newTodo}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:text="@={viewModel.newTodo}"
             android:hint="할 일을 입력하세요"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toStartOf="@+id/add_button"
